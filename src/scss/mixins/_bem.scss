@@ -1,0 +1,53 @@
+/// Block Element
+/// @param {String} $element - Element's name
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+/// Block Modifier
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+// Version 1
+// .component {
+//     $self: &; // Hey look, it's our new best friend!
+//     display: block;
+//     max-width: 30rem;
+//     min-height: 30rem;
+//     // Other styles redacted
+
+//     &--reversed {
+//       background: white;
+//       border-color: lightgray;
+
+//       // Here, we use $self to get the correct scope
+//       #{ $self }__child-element {
+//         background: rebeccapurple;
+//       }
+//     }
+// }
+
+
+// Version 2
+// .block {
+//     @at-root #{&}__element {
+
+//     }
+//     @at-root #{&}--modifier {
+
+//     }
+// }
+
+
+// Version 3
+// .block {
+//     &__element {
+
+//     }
+// }

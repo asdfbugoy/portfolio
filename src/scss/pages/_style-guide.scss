@@ -1,0 +1,183 @@
+@include block("style-guide") {
+    @include element("title") {
+        font-size: 24px;
+        color: #232323;
+        padding-bottom: 28px;
+        margin-bottom: 70px;
+        border-bottom: 1.5px solid $black;
+        padding-top: 55px;
+    }
+    
+    @include element("sub-title") {
+        border-bottom: 1px solid #DDDDDD;
+        padding-bottom: 22px;
+        margin-bottom: 18px;
+    }
+
+    @include block("intro") {
+        background-color: $red;
+        color: $white;
+        padding: 130px 0px;
+
+        @include element("hr") {
+            border-top: 1px solid $white;
+        }
+
+        @include element("title") {
+            font-family: "Museo";
+            font-size: 50px;
+            line-height: normal;
+            margin-bottom: 370px;
+        }
+
+        @include element("version") {
+            font-family: "MuseoMedium";
+            font-size: 30px;
+        }
+
+        @include element("hr") {
+            border-top: 1px solid $white;
+        }
+
+        @include block("wrap") {
+            border-top: 1px solid $white;
+            border-bottom: 1px solid $white;
+            padding: 52px 0px;
+        }
+    }
+
+    @include block("table-of-contents") {
+        background-color: #1D3444;
+        color: $white;
+        padding: 130px 0px;
+
+        @include element("title") {
+            font-size: 30px;
+            font-family: "Museo";
+        }
+
+        @include block("wrap") {
+            border-top: 1px solid $white;
+            border-bottom: 1px solid $white;
+            padding: 52px 0px;
+        }
+    }
+
+    @include block("color-palettes") {
+
+        @include block("category") {
+
+            @include block("color") {
+                @include element("hex") {
+                    height: 57px;
+                    font-size: $vs;
+
+                    @include modifier("btn-red") {
+                        background-color: $red;
+                    }
+
+                    @include modifier("btn-blue") {
+                        background-color: $btn-blue;
+                    }
+
+                    @include modifier("btn-light-blue") {
+                        background-color: $btn-light-blue;
+                        color: $white;
+                        height: auto;
+                        padding: 21px 0px;
+                    }
+
+                    @include modifier("btn-very-light-blue") {
+                        background-color: $btn-very-light-blue;
+                        color: $blue;
+                        height: auto;
+                        padding: 21px 0px;
+                    }
+
+                    @include modifier("btn-dark-blue") {
+                        background-color: $btn-dark-blue;
+                    }
+
+                    @include modifier("txt-blue") {
+                        background-color: $txt-blue;
+                    }
+
+                    @include modifier("txt-gray") {
+                        background-color: $txt-gray;
+                    }
+
+                    @include modifier("txt-dark-blue") {
+                        background-color: $txt-dark-blue;
+                    }
+
+                    @include modifier("s-blue") {
+                        background-color: $s-blue;
+                    }
+
+                    @include modifier("s-light-blue") {
+                        background-color: $s-blue;
+                    }
+
+                    @include modifier("s-green") {
+                        background-color: $s-green;
+                    }
+
+                    @include modifier("s-orange") {
+                        background-color: $s-orange;
+                    }
+
+                    @include modifier("s-red") {
+                        background-color: $s-red;
+                    }
+
+                    @include modifier("s-gray") {
+                        background-color: $s-gray;
+                    }
+                }
+
+                @include block("description") {
+                    font-size: $s;
+                    color: $txt-gray;
+                    padding: 11px 15px;
+                    background-color: rgba(0, 0, 0, 0.02);
+                    @include element("value") {
+                        color: #4A4A4A;
+                    }
+                }
+            }
+
+            @include block("background") {
+                @include element("card") {
+                    border: 1px solid #EAEAEA;
+                    padding: 13px;
+                    @include block("color") {
+                        padding: 54px 0px;
+                        text-align: center;
+                        @include modifier("red") {
+                            background-color: $bg-red;
+                            color: $txt-white;
+                        }
+                        @include modifier("gray") {
+                            background-color: $bg-gray;
+                            color: $txt-gray;
+                        }
+                        @include modifier("white") {
+                            background-color: $bg-white;
+                            color: $txt-gray;
+                        }
+                        @include modifier("blue") {
+                            background-color: $bg-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include block("typography") {
+        @include block("footer") {
+            font-size: $footer-text-size;
+            color: $txt-gray;
+        }
+    }
+}

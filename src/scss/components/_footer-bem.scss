@@ -1,0 +1,57 @@
+@include block("footer") {
+    padding: 20px 0px;
+    font-size: $footer-text-size;
+    color: $txt-gray;
+    @include element("copyright") {
+        color: $txt-gray;
+        a {
+            color: $txt-gray;
+            font-size: $footer-text-size;
+        }
+    }
+    @include element("breadcrumbs") {
+        // color: $btn-blue;
+        @include block("link") {
+            font-size: 14px;
+            // display: block;
+            font-family: "AvenirLTStd";
+            font-weight: bold;
+            + .link {
+                text-decoration: none;
+                &::before {
+                    color: $txt-gray;
+                    padding: 0px 15px;
+                    content: ">";
+                }
+            }
+            @include media-breakpoint-up(sm) {
+                // display: inline;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.error-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $white;
+    text-align: center;
+    padding: 20px 0px;
+
+    font-size: $footer-text-size;
+    .copyright {
+        color: $txt-gray;
+        a {
+            color: $txt-gray;
+            font-size: $footer-text-size;
+        }
+    }
+}
+
+.before-footer {
+    height: 20px;
+    background-color: $bg-gray;
+}

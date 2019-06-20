@@ -1,0 +1,15 @@
+@include block("dropdown") {
+	@include block("dropdown-header") {
+		color: $dark-blue;
+	}
+	@include block("dropdown-item") {
+		color: $dark-blue;
+		background-color: transparent;
+		outline: none;
+		cursor: pointer;
+		&:hover {
+			color: $red;
+			// background-color: $bg-dark-blue;
+		}
+	}
+}
