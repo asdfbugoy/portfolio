@@ -1,9 +1,9 @@
 import React from 'react'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom'
 // import 'bootstrap/scss/bootstrap.scss'
 // import '@fortawesome/fontawesome-free/css/all.css'
 // import 'scss/main.scss'
-import Plans from 'pages/Plans'
+import Timeline from 'pages/Timeline'
 
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
         <div className="App">
             <Header />
             <Switch>
-                <Route exact path="/plans" component={Plans} />
+                <Route exact path="/timeline" component={Timeline} />
             </Switch>
             <Footer />
         </div>
@@ -23,7 +23,7 @@ const Header = () => {
         <div className="header white">
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-auto-sm m-auto text-center font-size-48 museo">
+                    <div className="col-auto-sm m-auto text-center font-size-48 museo d-none">
                         <i className="fab fa-facebook-f"></i>
                         <i className="fab fa-yandex"></i>
                         <i className="fab fa-angular"></i>
@@ -32,11 +32,15 @@ const Header = () => {
                         <i className="fas fa-exclamation"></i>
                         <i className="fab fa-speakap"></i>
                     </div>
+                    <div className="col-auto-sm font-size-48">
+                    <i className="fa fa-chess"></i>
+                    </div>
                     <div className="col">
                         <div className="menu">
                             <div className="menu__item mr-4">Resume</div>
                             <div className="menu__item mr-4">Experiences</div>
-                            <div className="menu__item">Blogs</div>
+                            <div className="menu__item mr-4">Blogs</div>
+                            <Link to="timeline" className="menu__item mr-4">Daily Timeline</Link>
                         </div>
                     </div>
                 </div>

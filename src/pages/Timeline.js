@@ -1,14 +1,6 @@
 import React from 'react'
 
-const ThingsToAccomplish = [
-    'Daily Timeline',
-    'Savings & Expenses',
-    'Portfolio & Applications',
-    'Other importants things like Passport Renewals',
-    'SingtelGo Tasks & Ideas'
-]
-
-const DailyTimeline = [
+const data = [
     {
         day: 'Monday',
         hours: [
@@ -272,9 +264,9 @@ const DailyTimeline = [
 ]
 
 
-const Plans = () => <div className="body py-4 background-gray">
+const Timeline = () => <div className="body py-4 background-gray">
     <div className="container">
-        {DailyTimeline.map((d, i) => <div className={`card card--container ${DailyTimeline.length !== (i + 1) ? 'mb-4' : ''}`} key={i}>
+        {data.map((d, i) => <div className={`card card--container ${data.length !== (i + 1) ? 'mb-4' : ''}`} key={i}>
             <div className="card-header">{d.day}</div>
             <div className="body">
                 {d.hours.map((dHour, iHour) => <React.Fragment key={iHour}>
@@ -290,4 +282,4 @@ const Plans = () => <div className="body py-4 background-gray">
 </div>
 
 
-export default Plans
+export default Timeline
